@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="shamii" default="run" basedir=".">
+
+<target name="create">
+
+<mkdir dir="bin"></mkdir>
+<mkdir dir="lib"></mkdir>
+<mkdir dir="lol"></mkdir>
+<mkdir dir="hehe"></mkdir>
+</target>
+<target name="delete" depends ="create">
+<delete dir="bin"></delete>
+<delete dir="lib"></delete>
+</target>
+<target name="copy">
+<copydir src="C:\Users\Toshiba\Desktop\eclipse\Project\src\me\" dest="C:\Users\Toshiba\Desktop\eclipse\Project\ant\build\bin"></copydir>
+</target>
+<target name="compile">
+<javac includeantruntime="true" srcdir="C:\Users\Toshiba\Desktop\eclipse\Project\src\me\"> </javac>
+</target>
+
+<target name="run" depends="compile">
+<javac includeantruntime="true" classname="shami.java">
+</javac>
+
+
+<classpath path="C:\Users\Toshiba\Desktop\eclipse\Autobuild\src\hello.java">
+</classpath>
+</target>
+
+</project>
